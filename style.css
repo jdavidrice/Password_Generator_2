@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-image: url(rainbow_background_5.jpg);
 }
 
 .wrapper {
@@ -136,9 +136,13 @@ header {
 	}
   }
 
-
 h2 {
 	margin: 10px 0 20px;
+	text-align: center;
+	font-size: 60px;
+}
+
+h3, h4 {
 	text-align: center;
 }
 
@@ -170,29 +174,17 @@ input[type=checkbox] {
 .result-container #result {
   	word-wrap: break-word;
 	max-width: calc(100% - 40px);
+	text-align: center;
 }
 
-.result-container .btn {
-	font-size: 20px;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	height: 40px;
-	width: 40px;
-}
-
-.btn {
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	padding: 8px 12px;
-	background-color: #3B3B98;
+.result {
+	text-align: center;
 }
 
 .btn-large {
 	display: block;
 	width: 100%;
+	background-color: blue;
 }
 
 .setting {
