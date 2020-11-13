@@ -109,7 +109,7 @@ function getRandomSymbol() {
 }
 
 
-console.log(getRandomLower());
-console.log(getRandomUpper());
-console.log(getRandomNumber());
-console.log(getRandomSymbol());
+//console.log(getRandomLower());
+//console.log(getRandomUpper());
+//console.log(getRandomNumber());
+//console.log(getRandomSymbol());
