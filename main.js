@@ -47,7 +47,7 @@ clipboardEl.addEventListener('click', () => {
     textarea.select();
     document.execCommand('copy');
     textarea.remove();
-    alert('Password copied to clipboard!');
+    alert('Who\'s got another Fantastic Password copied to the clipboard? YOU DO! Now, go ahead and paste it wherever you want!');
 });
 
 // Generate password function
