@@ -72,6 +72,11 @@ header {
   clear: both;
 }
 
+.instructions h2 {
+	padding-top: 0px;
+	margin: 20px;
+}
+
 .btn {
 	border: none;
 	background-color: hsl(360, 91%, 36%);
@@ -97,52 +102,51 @@ header {
 	float: right;
   }
 
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
   #password {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border: none;
-	display: block;
-	width: 100%;
-	padding-top: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 85px;
-	font-size: 1.2rem;
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border: 2px dashed #c0c7cf;
-	border-radius: 6px;
-	resize: none;
-	overflow: hidden;
+	font-size: 1rem;
   }
-
-  @media (max-width: 690px) {
-	.btn {
-	  font-size: 1rem;
-	  margin: 16px 0px 0px 0px;
-	  padding: 10px 15px;
-	}
+}
   
-	#password {
-	  font-size: 1rem;
-	}
+@media (max-width: 500px) {
+  .btn {
+	font-size: 0.8rem;
   }
-  
-  @media (max-width: 500px) {
-	.btn {
-	  font-size: 0.8rem;
-	}
-  }
+}
 
-h2 {
+h1 {
 	margin: 10px 0 20px;
 	text-align: center;
 	font-size: 60px;
 }
 
-h3, h4 {
+h2, h3, h4 {
 	text-align: center;
 }
 
@@ -162,6 +166,7 @@ input[type=checkbox] {
 	background-color: rgba(0, 0, 0, 0.4);
 	display: flex;
 	justify-content: flex-start;
+	text-align: center;
 	align-items: center;
 	position: relative;
 	font-size: 18px;
@@ -174,6 +179,10 @@ input[type=checkbox] {
 .result-container #result {
   	word-wrap: break-word;
 	max-width: calc(100% - 40px);
+	text-align: center;
+}
+
+.result-container h4 {
 	text-align: center;
 }
 
