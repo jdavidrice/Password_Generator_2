@@ -47,7 +47,7 @@ clipboardEl.addEventListener('click', () => {
     textarea.select();
     document.execCommand('copy');
     textarea.remove();
-    alert('Who\'s got another Fantastic Password copied to the clipboard? YOU DO! Now, go ahead and paste it wherever you want!');
+    alert('Password copied to clipboard!');
 });
 
 // Generate password function
@@ -90,17 +90,20 @@ function generatePassword(upper, lower, number, symbol, length) {
 
 }
 
-// Generator functions - http://www.net-comber.com/charset.html
+// Generator functions
 function getRandomLower() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    return lowercase[Math.floor(Math.random() * lowercase.length)];
 }
 
 function getRandomUpper() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    return uppercase[Math.floor(Math.random() * uppercase.length)];
 }
 
 function getRandomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+    const number = '0123456789';
+    return number[Math.floor(Math.random() * number.length)];
 }
 
 function getRandomSymbol() {
