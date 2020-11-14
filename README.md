@@ -4,7 +4,7 @@
 
 This website is a JavaScript Password Generator. It allows the user to choose from these options: lowercase letters, uppercase letters, numbers, and special characters. The user also needs to specify the length of the password that is generated (8 - 128 characters). 
 
-[Link to published website]()
+[Link to published website](https://jdavidrice.github.io/Password_Generator_2/)
 
 ## Table of Contents
 
@@ -39,7 +39,7 @@ This Password Generator can be used to generate passwords. Any attempt to use it
 
 ## Credits
 
-No credits
+JavaScript file based on video from Traversy Media. [JavaScript Password Generator](https://www.youtube.com/watch?v=duNmhKgtcsI)
 
 * [Return to Top](#Javascript-Password-Generator)
 

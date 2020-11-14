@@ -33,36 +33,16 @@ generateEl.addEventListener('click', () => {
     );
 });
 
-// Copy password to clipboard
-clipboardEl.addEventListener('click', () => {
-    const textarea = document.createElement('textarea');
-    const password = resultEl.innerText;
-
-    if(!password) {
-        return;
-    }
-
-    textarea.value = password;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    textarea.remove();
-    alert('Password copied to clipboard!');
-});
-
 // Generate password function
 function generatePassword(upper, lower, number, symbol, length) {
     // 1. Init pw var
-    // 2. Filter out unchecked types
-    // 3. Loop over length call generator function for each type
-    // 4. Add final pw to the pw var and return
-
     let generatedPassword = '';
 
     const typesCount = lower + upper + number + symbol;
 
     // console.log('typesCount: ', typesCount);
 
+    // 2. Filter out unchecked types
     const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter
     (
         item => Object.values(item)[0]
@@ -74,6 +54,7 @@ function generatePassword(upper, lower, number, symbol, length) {
         return '';
     }
 
+    // 3. Loop over length call generator function for each type
     for(let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0];
@@ -83,11 +64,10 @@ function generatePassword(upper, lower, number, symbol, length) {
             generatedPassword += randomFunc[funcName]();
         });
     }
-
+    // 4. Add final password to the password variable and return
     const finalPassword = generatedPassword.slice(0, length);
 
     return finalPassword;
-
 }
 
 // Generator functions
@@ -111,8 +91,22 @@ function getRandomSymbol() {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
+// console.log(getRandomLower(), getRandomUpper(), getRandomNumber(), getRandomSymbol());
 
-//console.log(getRandomLower());
-//console.log(getRandomUpper());
-//console.log(getRandomNumber());
-//console.log(getRandomSymbol());
+
+// Copy password to clipboard
+clipboardEl.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = resultEl.innerText;
+
+    if(!password) {
+        return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert('Password copied to clipboard!');
+});
