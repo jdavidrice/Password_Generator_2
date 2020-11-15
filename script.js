@@ -18,6 +18,11 @@ const randomFunc = {
 // Generate event listen
 generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
+        if (length < "8" || length > "128") {
+            alert ('Please choose a password length between 8 and 128!')
+            window.location.reload()
+            return ''    
+        };    
     const hasUpper = uppercaseEl.checked;
     const hasLower = lowercaseEl.checked;
     const hasNumber = numbersEl.checked;
@@ -50,6 +55,7 @@ function generatePassword(upper, lower, number, symbol, length) {
 
     // console.log('typesArr: ', typesArr);
 
+    // If no boxes are checked, it won't generate a password
     if(typesCount === 0) {
         return '';
     }
@@ -87,7 +93,7 @@ function getRandomNumber() {
 }
 
 function getRandomSymbol() {
-    const symbols = '!@#$%^&*(){}[]=<>/,.'
+    const symbols = '!"#$%&()*+,-./:;<=>?@[]^_`{|}~'
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
@@ -100,6 +106,7 @@ clipboardEl.addEventListener('click', () => {
     const password = resultEl.innerText;
 
     if(!password) {
+        alert ("Please Generate a Password!")
         return;
     }
 
@@ -109,4 +116,5 @@ clipboardEl.addEventListener('click', () => {
     document.execCommand('copy');
     textarea.remove();
     alert('Password copied to clipboard!');
+    window.location.reload();
 });

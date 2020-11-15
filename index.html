@@ -9,30 +9,36 @@
 </head>
 <body>
 	<div class="wrapper">
-		<h1>Amazing Password Generator</h1>
+		<header>
+			<h1>Amazing Password Generator</h1>
+		</header>
 	<div class="card">
 		<div class="result-container">
-			<span id="result">
-				Password Display Zone
+			<textarea 
+				readonly 
+				id="result" 
+				placeholder="Password Display Zone" 
+				aria-label="Generated Password">
+			</textarea>
 			</span>
 		</div>
 		<div class="instructions">
 			<h2>Instructions for Use</h2>
 			<ol>
-				<li>Enter a number between 8 and 128 in the "Password Length" text field.</li>
-				<li>Check between one and four of the "Password Security Settings."</li>
+				<li>Choose a password length between 8 and 128.</li>
+				<li>Check which character types you want to use.</li>
 				<li>Click on the "Generate Password" button.</li>
-				<li>View your generated password in the "Password Display Zone."</li>
-				<li>If you like your new password and want to use it, click on the "Copy Password" button.</li>
-				<li>Paste your new password wherever you want!</li>
+				<li>Click on the "Copy Password" button to copy to the clipboard.</li>
 			</ol>
 		</div>	
 	<div class="settings">
+		<h3>Password Security Settings</h3>
+		<form>
 		<div class="setting">
 			<label>Password Length</label>
-			<input type="number" id="length" min='8' max='128' value="20"/>
+			<input type='number' id='length' value='20' min='8' required max='128' required />
 		</div>
-		<h3>Password Security Settings</h3>
+		</form>
 		<div class="setting">
 			<label>Include Uppercase Letters</label> 
 			<input type="checkbox" id="uppercase" checked />
@@ -50,7 +56,7 @@
 			<input type="checkbox" id="symbols" checked />
 		</div>
 	</div>
-	<button class="btn btn-large" id="generate">
+	<button class="btn btn-large" type="submit" id="generate">
 		Generate Password
 	</button>
 	<button class="btn btn-large" id="clipboard">

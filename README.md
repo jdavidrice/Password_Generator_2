@@ -21,7 +21,7 @@ This website is a JavaScript Password Generator. It allows the user to choose fr
 
 ## Photo
 
-![Screenshot of completed website.]()
+![Screenshot of completed website.](amazing_pw_gen.png)
 
 * [Return to Top](#Javascript-Password-Generator)
 
@@ -33,7 +33,7 @@ There is nothing to install to utilize this Password Generator.
 
 ## Usage 
 
-This Password Generator can be used to generate passwords. Any attempt to use it for something other that that is STRICTLY FORBIDDEN BY LAW. 
+This Password Generator can be used to generate passwords. 
 
 * [Return to Top](#Javascript-Password-Generator)
 
