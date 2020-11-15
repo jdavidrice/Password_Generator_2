@@ -81,23 +81,12 @@ h2, h3, h4 {
   display: block;
   clear: both;
 }
-#result {
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: flex-start;
-  text-align: center;
-  align-items: center;
-  position: relative;
-  letter-spacing: 1px;
-  height: 75px;
-  width: 100%;
-  word-wrap: break-word;
-  font-size: 1vw;
-  max-width: calc(100% - 40px);
-  margin: auto;
-}
 
-/*.result-container {
+#pwDisplay {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+.result-container {
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: flex-start;
@@ -115,7 +104,6 @@ h2, h3, h4 {
   max-width: calc(100% - 40px);
   margin: auto;
 }
-*/
 
 .instructions h2 {
   padding-top: 0px;

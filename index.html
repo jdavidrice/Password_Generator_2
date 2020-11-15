@@ -12,18 +12,17 @@
 		<header>
 			<h1>Amazing Password Generator</h1>
 		</header>
-	<div class="card">
-		<div class="result-container">
-			<textarea 
-				readonly 
-				id="result" 
-				placeholder="Password Display Zone" 
-				aria-label="Generated Password">
-			</textarea>
-			</span>
-		</div>
+		<div class="card">
+		<h3 id="pwDisplay">Password Display Zone</h3>
+			<div class="result-container">
+				<span 
+					readonly 
+					id="result" 
+					aria-label="Generated Password">
+				</span>
+			</div>
 		<div class="instructions">
-			<h2>Instructions for Use</h2>
+		<h2>Instructions for Use</h2>
 			<ol>
 				<li>Choose a password length between 8 and 128.</li>
 				<li>Check which character types you want to use.</li>
@@ -31,41 +30,39 @@
 				<li>Click on the "Copy Password" button to copy to the clipboard.</li>
 			</ol>
 		</div>	
-	<div class="settings">
+		<div class="settings">
 		<h3>Password Security Settings</h3>
-		<form>
-		<div class="setting">
-			<label>Password Length</label>
-			<input type='number' id='length' value='20' min='8' required max='128' required />
+			<form>
+			<div class="setting">
+				<label>Password Length</label>
+				<input type='number' id='length' value='20' min='8' required max='128' required />
+			</div>
+			</form>
+			<div class="setting">
+				<label>Include Uppercase Letters</label> 
+				<input type="checkbox" id="uppercase" checked />
+			</div>
+			<div class="setting">
+				<label>Include Lowercase Letters</label> 
+				<input type="checkbox" id="lowercase" checked />
+			</div>
+			<div class="setting">
+				<label>Include Numbers</label> 
+				<input type="checkbox" id="numbers" checked />
+			</div>
+			<div class="setting">
+				<label>Include Symbols</label> 
+				<input type="checkbox" id="symbols" checked />
+			</div>
 		</div>
-		</form>
-		<div class="setting">
-			<label>Include Uppercase Letters</label> 
-			<input type="checkbox" id="uppercase" checked />
-		</div>
-		<div class="setting">
-			<label>Include Lowercase Letters</label> 
-			<input type="checkbox" id="lowercase" checked />
-		</div>
-		<div class="setting">
-			<label>Include Numbers</label> 
-			<input type="checkbox" id="numbers" checked />
-		</div>
-		<div class="setting">
-			<label>Include Symbols</label> 
-			<input type="checkbox" id="symbols" checked />
+		<button class="btn btn-large" type="submit" id="generate">
+			Generate Password
+		</button>
+		<button class="btn btn-large" id="clipboard">
+			Copy Password
+		</button>
 		</div>
 	</div>
-	<button class="btn btn-large" type="submit" id="generate">
-		Generate Password
-	</button>
-	<button class="btn btn-large" id="clipboard">
-		Copy Password
-	</button>
-	
-</div>
-</div>
-
 <script src="script.js"></script>
 </body>
 </html>
