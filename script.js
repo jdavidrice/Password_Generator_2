@@ -17,7 +17,7 @@ const randomFunc = {
 // Generate event listener
 generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
-        if (length < "8" || length > "128") {
+        if (length < 8 || length > 128) {
             alert ("Please choose a password length between 8 and 128.")
             window.location.reload()
             return ''    
@@ -33,6 +33,7 @@ generateEl.addEventListener('click', () => {
         hasSymbol, 
         length
     );
+    console.log(hasUpper, hasLower, hasNumber, hasSymbol);
 });
 
 // Generate password function
@@ -40,7 +41,7 @@ function generatePassword(upper, lower, number, symbol, length) {
     // 1. Init pw var
     let generatedPassword = '';
     const typesCount = lower + upper + number + symbol;
-    // console.log('typesCount: ', typesCount);
+    console.log('typesCount: ', typesCount);
     // 2. Filter out unchecked types
     const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter
     (
